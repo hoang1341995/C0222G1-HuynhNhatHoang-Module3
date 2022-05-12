@@ -1,11 +1,9 @@
-# create class table
-create table `class`(
-`id` int not null,
-`name` varchar(45),
-primary key (`id`)
+CREATE TABLE `class` (
+    `id` INT NOT NULL,
+    `name` VARCHAR(45),
+    PRIMARY KEY (`id`)
 );
 
-#create student table
 CREATE TABLE `student` (
     `id` INT NOT NULL,
     `name` VARCHAR(45) NULL,
