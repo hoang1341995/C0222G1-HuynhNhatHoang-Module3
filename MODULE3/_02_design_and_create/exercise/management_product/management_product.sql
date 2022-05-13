@@ -1,21 +1,22 @@
 create database if not EXISTS quan_ly_vat_tu;
 use quan_ly_vat_tu;
 
-# tạo bang sdt va them gia tri
-create table if not EXISTS sdt(
-id int PRIMARY KEY AUTO_INCREMENT,
-sdt varchar(50)
-);
-INSERT INTO sdt values (1,'0909999999');
 # tạo bang nhacc va them gia tri
 create table if not EXISTS nhacc(
 id int PRIMARY key AUTO_INCREMENT,
 ten_ncc VARCHAR(50),
-dia_chi VARCHAR(50),
-sdt_id INT,
-FOREIGN KEY(sdt_id) REFERENCES sdt(id)
+dia_chi VARCHAR(50)
 );
-INSERT into nhacc (ten_ncc, dia_chi,sdt_id) values ('codeGym','DaNang',1);
+INSERT into nhacc (ten_ncc, dia_chi) values ('codeGym','DaNang');
+
+# tạo bang sdt va them gia tri
+create table if not EXISTS sdt(
+id int PRIMARY KEY AUTO_INCREMENT,
+nha_cc_id int,
+sdt varchar(50),
+foreign key (nha_cc_id) REFERENCES nhacc(id)
+);
+INSERT INTO sdt (nha_cc_id,sdt) values (1,'0909999999');
 
 create TABLE if not EXISTS phieu_xuat(
 id int PRIMARY KEY AUTO_INCREMENT,
