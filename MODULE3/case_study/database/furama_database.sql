@@ -175,7 +175,9 @@ ma_nhan_vien int,
 ma_khach_hang int,
 ma_dich_vu int,
 FOREIGN KEY(ma_nhan_vien) REFERENCES nhan_vien(ma_nhan_vien),
-FOREIGN KEY(ma_khach_hang) REFERENCES khach_hang(ma_khach_hang),
+FOREIGN KEY(ma_khach_hang) REFERENCES khach_hang(ma_khach_hang)
+on DELETE CASCADE,
+
 FOREIGN KEY(ma_dich_vu) REFERENCES dich_vu(ma_dich_vu)
 );
 insert into hop_dong(ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,ma_nhan_vien,ma_khach_hang,ma_dich_vu)values
@@ -208,7 +210,7 @@ ma_hop_dong_chi_tiet INT PRIMARY KEY AUTO_INCREMENT,
 ma_hop_dong int,
 ma_dich_vu_di_kem int,
 so_luong int not null,
-FOREIGN KEY(ma_hop_dong) REFERENCES hop_dong(ma_hop_dong),
+FOREIGN KEY(ma_hop_dong) REFERENCES hop_dong(ma_hop_dong) on DELETE CASCADE,
 FOREIGN KEY(ma_dich_vu_di_kem) REFERENCES dich_vu_di_kem(ma_dich_vu_di_kem)
 );
 insert into hop_dong_chi_tiet (so_luong,ma_hop_dong,ma_dich_vu_di_kem)values(5,2,4);
@@ -361,6 +363,45 @@ GROUP BY hd.ma_khach_hang;
 
 #13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
 # (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+
+select  dvdk.ma_dich_vu_di_kem,
+		dvdk.ten_dich_vu_di_kem,
+		sum(hdct.so_luong)
+from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+group by ma_dich_vu_di_kem 
+having sum(hdct.so_luong)  =(select sum(hdct.so_luong) from hop_dong_chi_tiet hdct
+group by  hdct.ma_dich_vu_di_kem   order by sum(hdct.so_luong) desc  limit 1 ) ;
+
+#14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
+# Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem,
+# so_lan_su_dung (được tính dựa trên việc count các ma_dich_vu_di_kem).
+
+select  hd.ma_hop_dong,
+		ldv.ten_loai_dich_vu,
+        dvdk.ten_dich_vu_di_kem,
+        dvdk.ma_dich_vu_di_kem as so_lan_su_dung
+from hop_dong hd
+join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu
+join loai_dich_vu ldv on ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
+join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+where dvdk.ma_dich_vu_di_kem = 1;
+
+# 15.Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do,
+# ten_bo_phan, so_dien_thoai, dia_chi mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
