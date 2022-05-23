@@ -1,7 +1,13 @@
 use database_furama;
 #2.	Hiển thị thông tin của tất cả nhân viên trong hệ thống
 # có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 kí tự.
-SELECT * from nhan_vien where ho_ten regexp '\\w+\\s[H,K,T][a-z]+$' and char_length(ho_ten)<16;
+
+select *
+from nhan_vien
+where (ho_ten like 'h%' 
+	or ho_ten like 'k%' 
+    or ho_ten like 't%')
+and char_length(ho_ten) <= 15;
 
 #3.	Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 select * from khach_hang where (year(current_date()) - year(ngay_sinh) between 18 and 50)
@@ -21,18 +27,18 @@ group by hd.ma_khach_hang;
 #(những khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
 
 SELECT kh.ma_khach_hang, kh.ho_ten,
-loai_khach.ten_loai_khach,
+lk.ten_loai_khach,
  hd.ma_hop_dong,
  hd.ngay_lam_hop_dong,
  hd.ngay_ket_thuc,
  dv.ten_dich_vu,
- (dv.chi_phi_thue + (hop_dong_chi_tiet.so_luong * dich_vu_di_kem.gia)) as tong_tien
- FROM hop_dong_chi_tiet
- left JOIN hop_dong hd on hd.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
- left JOIN dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
+ (dv.chi_phi_thue + coalesce(( hdct.so_luong*dvdk.gia),0) )as tong_tien
+ FROM hop_dong_chi_tiet hdct
+ left JOIN hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
+ left JOIN dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
  left JOIN dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
 left JOIN khach_hang kh on kh.ma_khach_hang = hd.ma_khach_hang
-left JOIN loai_khach on loai_khach.ma_loai_khach = kh.ma_loai_khach;
+left JOIN loai_khach lk on lk.ma_loai_khach = kh.ma_loai_khach;
 
 #6.	Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu của tất cả các loại dịch vụ
 #chưa từng được khách hàng thực hiện đặt từ quý 1 của năm 2021 (Quý 1 là tháng 1, 2, 3).
@@ -132,9 +138,8 @@ join nhan_vien nv on hd.ma_nhan_vien = nv.ma_nhan_vien
 join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
 join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu 
-
 where hd.ma_khach_hang in (select hd.ma_khach_hang from hop_dong hd where quarter(hd.ngay_lam_hop_dong) = 4 and year(hd.ngay_lam_hop_dong) = 2020)
- and hd.ma_khach_hang not in ( select hd.ma_khach_hang from hop_dong hd where quarter(hd.ngay_lam_hop_dong) in (1,2) and year(hd.ngay_lam_hop_dong) = 2021)
+and hd.ma_khach_hang not in ( select hd.ma_khach_hang from hop_dong hd where quarter(hd.ngay_lam_hop_dong) in (1,2) and year(hd.ngay_lam_hop_dong) = 2021)
 GROUP BY hd.ma_khach_hang;
 
 #13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
@@ -201,7 +206,7 @@ join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
 join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
 join dich_vu dv on dv.ma_dich_vu = hd.ma_dich_vu
 where year(hd.ngay_lam_hop_dong) = 2021 and kh.ma_loai_khach = 2
- and  (dv.chi_phi_thue + (hdct.so_luong * dvdk.gia)) > 10000000) as return_ma_khach_hang);
+and  (dv.chi_phi_thue + (hdct.so_luong * dvdk.gia)) > 10000000) as return_ma_khach_hang);
  
 # 18.Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
 
@@ -216,8 +221,8 @@ in (select asd.ma_dich_vu_di_kem from (select  dvdk.ma_dich_vu_di_kem
 from dich_vu_di_kem dvdk
 join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
- group by dvdk.ma_dich_vu_di_kem 
- having sum(hdct.so_luong) >= 10) as asd);
+group by dvdk.ma_dich_vu_di_kem 
+having sum(hdct.so_luong) >= 10) as asd);
 
 #20.Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,
 # thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai,
@@ -235,9 +240,11 @@ select  kh.ma_khach_hang as id,
         kh.so_dien_thoai
 from khach_hang kh
         
+#21.Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu”
+# và đã từng lập hợp đồng cho một hoặc nhiều  khách_hàng bất kì với ngày lập hợp đồng là “12/12/2019”
 
  
- 
+ #create view v_nhan_vien as select 
 
 
 
