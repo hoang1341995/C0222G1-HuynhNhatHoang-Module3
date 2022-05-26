@@ -144,25 +144,13 @@
 <body>
 <div id="bg">
     <div class="module">
-        <%
-            String product = "";
-            int price = 0;
-            int percent = 0;
-            double discount_mount = 0;
-            double total = 0;
 
-                product = request.getParameter("product");
-                price = Integer.parseInt(request.getParameter("price"));
-                percent = Integer.parseInt(request.getParameter("percent"));
-                discount_mount = price * percent * 0.01;
-                total = (price * percent) - discount_mount;
-        %>
         <div class="display-1" style="text-align: center;line-height: 50px">
-            <p>Product Description: <%=product%></p>
-            <p>List Price: <%=price%></p>
-            <p>Discount Percent: <%=percent%></p>
-            <p>Discount Amount: <%=discount_mount%></p>
-            <p>Discount Price: <%=total%></p>
+            <p>Product Description: ${product}</p>
+            <p>List Price: ${price}</p>
+            <p>Discount Percent: ${percent}</p>
+            <p>Discount Amount: ${discount_mount}</p>
+            <p>Discount Price: ${total}</p>
         </div>
 
     </div>

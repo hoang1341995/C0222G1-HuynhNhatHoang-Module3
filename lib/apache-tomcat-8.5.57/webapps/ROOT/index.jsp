@@ -148,7 +148,7 @@
         <li class="tab activeTab icon">Product Discount Calculator</li>
       </ul>
 
-      <form class="form" action="/display_discount.jsp" method="post">
+      <form class="form" action="/display_discount" method="post">
         <input type="text" placeholder="Product Description" name="product" class="textbox" />
         <input type="text" placeholder="List Price" name="price" class="textbox" />
         <input type="text" placeholder="Discount Percent" name="percent" class="textbox" />
