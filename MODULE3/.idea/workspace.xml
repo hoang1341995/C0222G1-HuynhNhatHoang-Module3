@@ -5,13 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc145167-8f64-4e1c-8690-f0dadb7eb6e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/manager/manager/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/manager/manager/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/manager/manager/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/manager/manager/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MODULE3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/_10_jsp_jstl/practice/currency_converter_app/src/main/webapp/converter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/classes/display_discount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/display.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.min.js.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -46,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653547836987</updated>
       <workItem from="1653547841530" duration="27000" />
+      <workItem from="1653635532688" duration="4000" />
     </task>
     <servers />
   </component>
