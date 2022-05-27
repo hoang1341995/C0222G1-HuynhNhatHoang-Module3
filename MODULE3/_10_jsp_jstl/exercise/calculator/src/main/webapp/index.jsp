@@ -5,6 +5,7 @@
   Time: 10:12
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -41,14 +42,14 @@
 <h1>Simple Calculator</h1>
 <div>
     <form action="/calculator" method="post">
-        <input type="number" name="number1" placeholder="First Operand"><br>
+        <input type="number" name="number1" value="${number1}" placeholder="First Operand"><br>
         <select name="operator">
-            <option value="+">addition(+)</option>
-            <option value="-">subtraction(-)</option>
-            <option value="*">multiplication(*)</option>
-            <option value="/">division(/)</option>
+            <option <c:if test="${operator == '+'}" >selected</c:if> value="+">addition(+)</option>
+            <option <c:if test="${operator == '-'}" >selected</c:if> value="-">subtraction(-)</option>
+            <option <c:if test="${operator == '*'}" >selected</c:if>  value="*">multiplication(*)</option>
+            <option <c:if test="${operator == '/'}" >selected</c:if>  value="/">division(/)</option>
         </select><br>
-        <input type="number" name="number2" placeholder="Second Operand"><br>
+        <input type="number" name="number2" value="${number2}" placeholder="Second Operand"><br>
         <input type="submit" name="Submit">
         <p>${total}</p>
     </form>

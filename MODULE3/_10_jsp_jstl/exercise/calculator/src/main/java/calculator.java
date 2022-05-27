@@ -21,6 +21,9 @@ public class calculator extends HttpServlet {
         try {
             float total = Cal(number1,number2,operator);
             request.setAttribute("total","Result: "+number1 + " "+ operator + " "+number2+ " = "+total);
+            request.setAttribute("number1",number1);
+            request.setAttribute("number2",number2);
+            request.setAttribute("operator",request.getParameter("operator"));
             request.getRequestDispatcher("index.jsp").forward(request,response);
         }catch (Exception e) {
             request.setAttribute("total",e.getMessage());
