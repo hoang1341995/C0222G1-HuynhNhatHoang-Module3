@@ -36,8 +36,7 @@
         border: #fff 15px solid;
     }
 
-    .module {
-        position: relative;
+    .module {        position: relative;
         top: 15%;
         height: 70%;
         width: 450px;
@@ -51,7 +50,7 @@
 
     }
 
-    .module ul {
+    .module ul {.
         list-style-type: none;
         margin: 0;
     }
@@ -139,8 +138,7 @@
     .button:hover {
         background: #80b438;
 
-    }
-</style>
+    }e>
 <body>
 <div id="bg">
     <div class="module">
