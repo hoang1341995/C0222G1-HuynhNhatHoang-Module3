@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc145167-8f64-4e1c-8690-f0dadb7eb6e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_10_jsp_jstl/practice/currency_converter_app/src/main/webapp/converter.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/classes/display_discount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/display.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/apache-tomcat-8.5.57/webapps/ROOT/js/bootstrap.min.js.map" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_furama/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_furama/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_furama/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_furama/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_furama/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_furama/src/main/webapp/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_furama/src/main/webapp/bootstrap/js/bootstrap.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +23,18 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29gw2f4Re0b5fAISZoC8AKvR8lj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -49,12 +42,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,6 +61,7 @@
       <updated>1653547836987</updated>
       <workItem from="1653547841530" duration="27000" />
       <workItem from="1653635532688" duration="4000" />
+      <workItem from="1654070574634" duration="78000" />
     </task>
     <servers />
   </component>
