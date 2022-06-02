@@ -79,9 +79,7 @@ public class UserDAO implements IUserDAO {
 
     @Override
     public List<User> selectAllUsers() {
-        // using try-with-resources to avoid closing resources (boiler plate code)
         List<User> users = new ArrayList<>();
-        // Step 1: Establishing a Connection
         try (Connection connection = getConnection();
 
              // Step 2:Create a statement using connection object

@@ -5,52 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22682a17-16ae-4998-95c7-41b7512770f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/form/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/form/nav-bar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_mvc/exercise/management_products/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_11_mvc/exercise/management_products/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_mvc/exercise/management_products/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_11_mvc/exercise/management_products/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_mvc/exercise/management_products/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_11_mvc/exercise/management_products/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_jdbc_crud/exercise/user_manager/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_jdbc_crud/exercise/user_manager/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_jdbc_crud/exercise/user_manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_jdbc_crud/exercise/user_manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bootstrap/bootstrap-4.0.0-dist/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/classes/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/classes/repository/IUserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/WEB-INF/classes/repository/impl/UserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/view/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/view/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/view/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/view/search.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/apache-tomcat-8.5.57/webapps/ROOT/view/sort.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/case_study_furama-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/jquery-3.6.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/form/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/form/nav-bar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +57,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -80,6 +70,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectId" id="2A0B7jKcoC7ry3k05FsSGsdo5io" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -91,7 +82,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/bootstrap/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -190,6 +181,10 @@
       <option name="presentableId" value="Default" />
       <updated>1654070262253</updated>
       <workItem from="1654070263993" duration="3895000" />
+      <workItem from="1654136465580" duration="30000" />
+      <workItem from="1654136512161" duration="32000" />
+      <workItem from="1654136559453" duration="42000" />
+      <workItem from="1654136618098" duration="128000" />
     </task>
     <servers />
   </component>

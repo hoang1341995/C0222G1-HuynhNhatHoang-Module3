@@ -4,33 +4,40 @@
     <title>navbar</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark bg-dark main-nav">
-    <div class="container">
-        <ul class="nav navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Download</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Website Name</a></li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Rates</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Help</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item active"><a href="/" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="employee" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nhân viên</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="/employee?action=list">Danh sách nhân viên</a>
+                        <a class="dropdown-item" href="/employee?action=add">Thêm mới nhân viên</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="customer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Khách hàng</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="/customer?action=list">Danh sách khách hàng</a>
+                        <a class="dropdown-item" href="/customer?action=add">Thêm mới khách hàng</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="service" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dịch vụ</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="#">Danh sách dịch vụ</a>
+                        <a class="dropdown-item" href="#">Thêm mới dịch vụ</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Hợp Đồng</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Đăng ký</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 </body>
