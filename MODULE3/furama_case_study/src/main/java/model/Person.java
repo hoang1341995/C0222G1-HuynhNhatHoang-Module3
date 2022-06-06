@@ -1,11 +1,10 @@
 package model;
 
-public class Person {
-    private int id;
+public abstract class  Person {
+    private Integer id;
     private String name;
-    private String dayOfBirth;
+    private String birthday;
     private String idCard;
-    private String gender;
     private String phone;
     private String email;
     private String address;
@@ -13,29 +12,31 @@ public class Person {
     public Person() {
     }
 
-    public Person(int id,
-                  String name,
-                  String dayOfBirth,
-                  String idCard,
-                  String gender,
-                  String phone,
-                  String email,
-                  String address) {
+    public Person(Integer id, String name, String birthday, String idCard, String phone, String email, String address) {
         this.id = id;
         this.name = name;
-        this.dayOfBirth = dayOfBirth;
+        this.birthday = birthday;
         this.idCard = idCard;
-        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+
+    }
+
+    public Person(String name, String birthday, String idCard, String phone, String email, String address) {
+        this.name = name;
+        this.birthday = birthday;
+        this.idCard = idCard;
         this.phone = phone;
         this.email = email;
         this.address = address;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -47,12 +48,12 @@ public class Person {
         this.name = name;
     }
 
-    public String getDayOfBirth() {
-        return dayOfBirth;
+    public String getBirthday() {
+        return birthday;
     }
 
-    public void setDayOfBirth(String dayOfBirth) {
-        this.dayOfBirth = dayOfBirth;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 
     public String getIdCard() {
@@ -63,13 +64,6 @@ public class Person {
         this.idCard = idCard;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 
     public String getPhone() {
         return phone;
@@ -95,5 +89,4 @@ public class Person {
         this.address = address;
     }
 }
-
 

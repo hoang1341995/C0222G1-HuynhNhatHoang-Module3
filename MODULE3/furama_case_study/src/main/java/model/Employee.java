@@ -1,131 +1,103 @@
 package model;
 
-public class Employee extends Person{
-    private double salary;
-    private String position;
-    private String educationDegree;
-    private String division;
+public class Employee extends Person {
+    private Double salary;
+    private Integer positionId;
+    private Integer educationId;
+    private  Integer divisionId;
+    private String positionValue;
+    private String educationValue;
+    private  String divisionValue;
+    private  String username;
+    private  String password;
 
     public Employee() {
     }
 
-    public Employee(int id, String name, String dayOfBirth, String idCard, String gender, String phone, String email, String address, double salary, String position, String educationDegree, String division) {
-        super(id, name, dayOfBirth, idCard, gender, phone, email, address);
+    public Employee(Integer id, String name, String birthday, String idCard, Double salary, String phone,
+                    String email, String address, Integer positionId, Integer educationId, Integer divisionId,
+                    String positionValue,String educationValue,String divisionValue,String username,String password) {
+        super(id, name, birthday, idCard, phone, email, address);
         this.salary = salary;
-        this.position = position;
-        this.educationDegree = educationDegree;
-        this.division = division;
+        this.positionId = positionId;
+        this.educationId = educationId;
+        this.divisionId = divisionId;
+        this.positionValue = positionValue;
+        this.educationValue = educationValue;
+        this.divisionValue = divisionValue;
+        this.username = username;
+        this.password = password;
     }
 
-    public double getSalary() {
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 
-    public String getPosition() {
-        return position;
+    public Integer getPositionId() {
+        return positionId;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setPositionId(Integer positionId) {
+        this.positionId = positionId;
     }
 
-    public String getEducationDegree() {
-        return educationDegree;
+    public Integer getEducationId() {
+        return educationId;
     }
 
-    public void setEducationDegree(String educationDegree) {
-        this.educationDegree = educationDegree;
+    public void setEducationId(Integer educationId) {
+        this.educationId = educationId;
     }
 
-    public String getDivision() {
-        return division;
+    public Integer getDivisionId() {
+        return divisionId;
     }
 
-    public void setDivision(String division) {
-        this.division = division;
+    public void setDivisionId(Integer divisionId) {
+        this.divisionId = divisionId;
     }
 
-    @Override
-    public int getId() {
-        return super.getId();
+    public String getPositionValue() {
+        return positionValue;
     }
 
-    @Override
-    public void setId(int id) {
-        super.setId(id);
+    public void setPositionValue(String positionValue) {
+        this.positionValue = positionValue;
     }
 
-    @Override
-    public String getName() {
-        return super.getName();
+    public String getEducationValue() {
+        return educationValue;
     }
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void setEducationValue(String educationValue) {
+        this.educationValue = educationValue;
     }
 
-    @Override
-    public String getDayOfBirth() {
-        return super.getDayOfBirth();
+    public String getDivisionValue() {
+        return divisionValue;
     }
 
-    @Override
-    public void setDayOfBirth(String dayOfBirth) {
-        super.setDayOfBirth(dayOfBirth);
-    }
-
-    @Override
-    public String getIdCard() {
-        return super.getIdCard();
-    }
-
-    @Override
-    public void setIdCard(String idCard) {
-        super.setIdCard(idCard);
-    }
-
-    @Override
-    public String getGender() {
-        return super.getGender();
-    }
-
-    @Override
-    public void setGender(String gender) {
-        super.setGender(gender);
-    }
-
-    @Override
-    public String getPhone() {
-        return super.getPhone();
-    }
-
-    @Override
-    public void setPhone(String phone) {
-        super.setPhone(phone);
-    }
-
-    @Override
-    public String getEmail() {
-        return super.getEmail();
-    }
-
-    @Override
-    public void setEmail(String email) {
-        super.setEmail(email);
-    }
-
-    @Override
-    public String getAddress() {
-        return super.getAddress();
-    }
-
-    @Override
-    public void setAddress(String address) {
-        super.setAddress(address);
+    public void setDivisionValue(String divisionValue) {
+        this.divisionValue = divisionValue;
     }
 }

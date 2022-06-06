@@ -11,6 +11,7 @@
     <title>header</title>
 </head>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../bootstrap/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
 <body>
 <section class="ftco-section">

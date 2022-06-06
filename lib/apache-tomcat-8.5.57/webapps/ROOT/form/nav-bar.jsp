@@ -12,13 +12,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item active"><a href="/" class="nav-link">Trang chủ</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="employee" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nhân viên</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="/employee?action=list">Danh sách nhân viên</a>
-                        <a class="dropdown-item" href="/employee?action=add">Thêm mới nhân viên</a>
-                    </div>
-                </li>
+                <li class="nav-item"><a href="/employee" class="nav-link">Nhân viên</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="customer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Khách hàng</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -29,8 +23,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="service" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dịch vụ</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="#">Danh sách dịch vụ</a>
-                        <a class="dropdown-item" href="#">Thêm mới dịch vụ</a>
+                        <a class="dropdown-item" href="/service?action=list">Danh sách dịch vụ</a>
+                        <a class="dropdown-item" href="/service?action=add">Thêm mới dịch vụ</a>
                     </div>
                 </li>
                 <li class="nav-item"><a href="#" class="nav-link">Hợp Đồng</a></li>

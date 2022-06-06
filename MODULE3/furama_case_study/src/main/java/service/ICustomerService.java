@@ -9,13 +9,13 @@ public interface ICustomerService {
 
     List<Customer> findCustomer(String key);
 
-    List<Customer> showList();
+    List<Customer> selectAllCustomer();
 
-    void addNewCustomer();
+    Map<String, String> createCustomer(Customer customer);
 
-    void deleteCustomerById(int id);
+    Map<String, String>  updateCustomer(Customer customer);
 
-    void editCustomerById(int id);
+    boolean deleteCustomerById(Integer id);
 
     public Map<Integer,String> getCustomerType();
 

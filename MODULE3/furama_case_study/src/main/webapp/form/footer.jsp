@@ -25,5 +25,16 @@
 </div>
 </body>
 <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+<script src="../bootstrap/js/jquery.dataTables.min.js"></script>
+<script src="../bootstrap/js/dataTables.bootstrap4.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tables').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 10
+        });
+    });
+</script>
 </html>

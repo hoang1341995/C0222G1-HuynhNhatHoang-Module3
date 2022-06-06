@@ -146,7 +146,6 @@ public class UserDAO implements IUserDAO {
             e.printStackTrace();
         }
         return userList;
-
     }
 
     @Override

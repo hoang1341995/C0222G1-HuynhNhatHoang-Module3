@@ -1,109 +1,58 @@
 package model;
 
-public class Customer extends Person{
-    private String customerType;
+public class Customer extends Person {
+    private  String code;
+    private Integer gender;
+    private Integer customerTypeId;
 
     public Customer() {
     }
 
-    public Customer(int id,
+    public Customer(Integer id,
+                    String code,
                     String name,
-                    String dayOfBirth,
+                    String birthday,
+                    Integer gender,
                     String idCard,
-                    String gender,
                     String phone,
                     String email,
                     String address,
-                    String customerType) {
-        super(id, name, dayOfBirth, idCard, gender, phone, email, address);
-        this.customerType = customerType;
+                    Integer customerTypeId) {
+        super(id, name, birthday, idCard, phone, email, address);
+        this.code = code;
+        this.gender = gender;
+        this.customerTypeId = customerTypeId;
     }
 
-    public String getCustomerType() {
-        return customerType;
+
+    public Customer(String code, String name, String birthday,Integer gender, String idCard, String phone, String email, String address,  Integer customerTypeId) {
+        super( name, birthday, idCard, phone, email, address);
+        this.code = code;
+        this.gender = gender;
+        this.customerTypeId = customerTypeId;
     }
 
-    public void setCustomerType(String customerType) {
-        this.customerType = customerType;
+    public String getCode() {
+        return code;
     }
 
-    @Override
-    public int getId() {
-        return super.getId();
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    @Override
-    public void setId(int id) {
-        super.setId(id);
+    public Integer getGender() {
+        return gender;
     }
 
-    @Override
-    public String getName() {
-        return super.getName();
+    public void setGender(Integer gender) {
+        this.gender = gender;
     }
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
+    public Integer getCustomerTypeId() {
+        return customerTypeId;
     }
 
-    @Override
-    public String getDayOfBirth() {
-        return super.getDayOfBirth();
-    }
-
-    @Override
-    public void setDayOfBirth(String dayOfBirth) {
-        super.setDayOfBirth(dayOfBirth);
-    }
-
-    @Override
-    public String getIdCard() {
-        return super.getIdCard();
-    }
-
-    @Override
-    public void setIdCard(String idCard) {
-        super.setIdCard(idCard);
-    }
-
-    @Override
-    public String getGender() {
-        return super.getGender();
-    }
-
-    @Override
-    public void setGender(String gender) {
-        super.setGender(gender);
-    }
-
-    @Override
-    public String getPhone() {
-        return super.getPhone();
-    }
-
-    @Override
-    public void setPhone(String phone) {
-        super.setPhone(phone);
-    }
-
-    @Override
-    public String getEmail() {
-        return super.getEmail();
-    }
-
-    @Override
-    public void setEmail(String email) {
-        super.setEmail(email);
-    }
-
-    @Override
-    public String getAddress() {
-        return super.getAddress();
-    }
-
-    @Override
-    public void setAddress(String address) {
-        super.setAddress(address);
+    public void setCustomerTypeId(Integer customerTypeId) {
+        this.customerTypeId = customerTypeId;
     }
 }
