@@ -7,4 +7,5 @@ public class regex {
     public static final String REGEX_PHONE =   "^(84|0[3|5|7|8|9])+([0-9]{8})$"; //"^((\\(84\\)(\\+))|0)(90|91)+([0-9]{7})$";
     public static final String REGEX_EMAIL = "^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
     public static final String REGEX_CODE_CUSTOMER ="^KH(\\-)[0-9]{4}$";
+    public static final String REGEX_CODE_SERVICE ="^DV(\\-)[0-9]{4}$";
 }

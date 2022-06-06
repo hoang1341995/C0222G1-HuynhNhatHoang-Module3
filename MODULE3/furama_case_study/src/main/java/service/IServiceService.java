@@ -8,15 +8,17 @@ import java.util.Map;
 
 public interface IServiceService {
 
-    List<Service> findCustomer(String key);
+    List<Service> findService(String key);
 
-    List<Customer> selectAllCustomer();
+    List<Service> selectAllService();
 
-    Map<String, String> createCustomer(Customer customer);
+    Map<String, String> createService(Service service);
 
-    Map<String, String>  updateCustomer(Customer customer);
+    Map<String, String>  updateService(Service service);
 
-    boolean deleteCustomerById(Integer id);
+    boolean deleteServiceById(Integer id);
 
-    public Map<Integer,String> getCustomerType();
+    Map<Integer,String> getRentType();
+
+    Map<Integer,String> getServiceType();
 }

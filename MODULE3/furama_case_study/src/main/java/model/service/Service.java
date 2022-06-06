@@ -5,12 +5,15 @@ public class Service {
     private String code;
     private String name;
     private Double area;
+    private Double serviceCost;
     private Integer maxPeople;
-    private Integer rentType; //table
-    private Integer serviceType; //table
+    private Integer rentTypeId; //table
+    private String rentTypeValue;
+    private Integer serviceTypeId; //table
+    private String serviceTypeValue;
     private String standardRoom;
     private String description;
-    private Integer poolArea;
+    private Double poolArea;
     private Integer numberFloors;
 
     public Service() {
@@ -20,24 +23,38 @@ public class Service {
                    String code,
                    String name,
                    Double area,
+                   Double serviceCost,
                    Integer maxPeople,
-                   Integer rentType,
-                   Integer serviceType,
+                   Integer rentTypeId,
+                   String rentTypeValue,
+                   Integer serviceTypeId,
+                   String serviceTypeValue,
                    String standardRoom,
                    String description,
-                   Integer poolArea,
+                   Double poolArea,
                    Integer numberFloors) {
         this.id = id;
         this.code = code;
         this.name = name;
         this.area = area;
+        this.serviceCost = serviceCost;
         this.maxPeople = maxPeople;
-        this.rentType = rentType;
-        this.serviceType = serviceType;
+        this.rentTypeId = rentTypeId;
+        this.rentTypeValue = rentTypeValue;
+        this.serviceTypeId = serviceTypeId;
+        this.serviceTypeValue = serviceTypeValue;
         this.standardRoom = standardRoom;
         this.description = description;
         this.poolArea = poolArea;
         this.numberFloors = numberFloors;
+    }
+
+    public Double getServiceCost() {
+        return serviceCost;
+    }
+
+    public void setServiceCost(Double serviceCost) {
+        this.serviceCost = serviceCost;
     }
 
     public Integer getId() {
@@ -80,20 +97,36 @@ public class Service {
         this.maxPeople = maxPeople;
     }
 
-    public Integer getRentType() {
-        return rentType;
+    public Integer getRentTypeId() {
+        return rentTypeId;
     }
 
-    public void setRentType(Integer rentType) {
-        this.rentType = rentType;
+    public void setRentTypeId(Integer rentTypeId) {
+        this.rentTypeId = rentTypeId;
     }
 
-    public Integer getServiceType() {
-        return serviceType;
+    public String getRentTypeValue() {
+        return rentTypeValue;
     }
 
-    public void setServiceType(Integer serviceType) {
-        this.serviceType = serviceType;
+    public void setRentTypeValue(String rentTypeValue) {
+        this.rentTypeValue = rentTypeValue;
+    }
+
+    public Integer getServiceTypeId() {
+        return serviceTypeId;
+    }
+
+    public void setServiceTypeId(Integer serviceTypeId) {
+        this.serviceTypeId = serviceTypeId;
+    }
+
+    public String getServiceTypeValue() {
+        return serviceTypeValue;
+    }
+
+    public void setServiceTypeValue(String serviceTypeValue) {
+        this.serviceTypeValue = serviceTypeValue;
     }
 
     public String getStandardRoom() {
@@ -112,11 +145,11 @@ public class Service {
         this.description = description;
     }
 
-    public Integer getPoolArea() {
+    public Double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(Integer poolArea) {
+    public void setPoolArea(Double poolArea) {
         this.poolArea = poolArea;
     }
 
