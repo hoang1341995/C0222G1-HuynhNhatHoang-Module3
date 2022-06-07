@@ -19,6 +19,10 @@ public class ServiceRepo implements IServiceRepo {
     private static final String UPDATE_SERVICE  = "UPDATE service SET service_name = ?, service_area = ?, service_cost = ? " +
             ", service_max_people = ?, rent_type_id = ?, service_type_id = ?, standard_room = ?, description_other_convenience = ?, number_of_floors = ? " +
             ", pool_area = ? WHERE (service_id = ?);";
+    private static final String CREATE_SERVICE = "insert into service (service_code, service_name, " +
+            "service_area, service_cost,service_max_people, rent_type_id, service_type_id, standard_room, description_other_convenience, number_of_floors, pool_area)" +
+            "value (?,?,?,?,?,?,?,?,?,?,?);";
+
     DAO dao = new DAO();
     @Override
     public List<Service> findService(String key) {
@@ -86,7 +90,32 @@ public class ServiceRepo implements IServiceRepo {
 
     @Override
     public void createService(Service service) {
-
+        Connection connection  = dao.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement(CREATE_SERVICE);
+            ps.setString(1, service.getCode());
+            ps.setString(2, service.getName());
+            ps.setDouble(3, service.getArea());
+            ps.setDouble(4, service.getServiceCost());
+            ps.setDouble(5, service.getMaxPeople());
+            ps.setInt(6, service.getRentTypeId());
+            ps.setInt(7, service.getServiceTypeId());
+            ps.setString(8, service.getStandardRoom());
+            ps.setString(9, service.getDescription());
+            if (service.getServiceTypeId() == 1||service.getServiceTypeId() == 2){
+                ps.setInt(10, service.getNumberFloors());
+            }else{
+                ps.setInt(10, Types.NULL);
+            }
+            if (service.getServiceTypeId() == 1){
+                ps.setDouble(11, service.getPoolArea());
+            }else{
+                ps.setInt(11, Types.NULL);
+            }
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

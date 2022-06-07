@@ -20,7 +20,6 @@ public class EmployeeService implements IEmployeeService {
     public List<Employee> findEmployee(String key) {
         List<Employee> employeeList = employeeRepo.findEmployee(key);
         List<Employee> employeeList2 = new ArrayList<>();
-        Map<Integer,String> divisionMap = employeeRepo.getDivision();
         for (Employee employees: employeeList){
             if (employees.getName().toLowerCase().contains(key.toLowerCase())||
                     employees.getAddress().toLowerCase().contains(key.toLowerCase())||

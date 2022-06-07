@@ -21,6 +21,47 @@ public class ServiceServlet extends HttpServlet {
     }
 
     private void addService(HttpServletRequest request, HttpServletResponse response) {
+        Service service = new Service();
+        service.setCode(request.getParameter("code"));
+        service.setName(request.getParameter("name"));
+        service.setArea(Double.parseDouble(request.getParameter("area")));
+        service.setServiceCost(Double.parseDouble(request.getParameter("serviceCost")));
+        service.setMaxPeople(Integer.parseInt(request.getParameter("maxPeople")));
+        service.setRentTypeId(Integer.parseInt(request.getParameter("rentTypeId")));
+        service.setServiceTypeId(Integer.parseInt(request.getParameter("serviceTypeId")));
+        service.setStandardRoom(request.getParameter("standardRoom"));
+        service.setDescription(request.getParameter("description"));
+        if (service.getServiceTypeId() == 1||service.getServiceTypeId() == 2){
+            service.setNumberFloors(Integer.parseInt(request.getParameter("numberFloors")));
+        }
+        if (service.getServiceTypeId() == 1){
+            service.setPoolArea(Double.parseDouble(request.getParameter("poolArea")));
+        }
+
+        Map<String,String> mapRegexAddService = serviceService.createService(service);
+
+        if (mapRegexAddService.isEmpty()){
+            request.setAttribute("message", "Thêm dịch vụ thành công");
+            request.setAttribute("openModalMessage","$('#message').modal();");
+        }else {
+            request.setAttribute("errorAdd",mapRegexAddService);
+            request.setAttribute("service",service);
+            request.setAttribute("openModalAdd","$('#addNew').modal();");
+        }
+        List<Service> serviceList = serviceService.selectAllService();
+        request.setAttribute("serviceList", serviceList);
+        Map<Integer, String> serviceTypeMap = serviceService.getServiceType();
+        request.setAttribute("serviceTypeMap", serviceTypeMap);
+        Map<Integer, String> rentTypeMap = serviceService.getRentType();
+        request.setAttribute("rentTypeMap", rentTypeMap);
+        try {
+            request.getRequestDispatcher("view/service/index-service.jsp").forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 

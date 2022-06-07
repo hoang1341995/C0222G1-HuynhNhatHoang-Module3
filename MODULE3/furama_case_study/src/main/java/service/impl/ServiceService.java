@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
+
+import static utils.regex.REGEX_CODE_SERVICE;
 
 public class ServiceService implements IServiceService {
     IServiceRepo serviceRepo = new ServiceRepo();
@@ -22,6 +25,7 @@ public class ServiceService implements IServiceService {
                     services.getCode().toLowerCase().contains(key.toLowerCase())||
                     services.getRentTypeValue().toLowerCase().contains(key.toLowerCase())||
                     services.getServiceTypeValue().toLowerCase().contains(key.toLowerCase())||
+                    services.getDescription().toLowerCase().contains(key.toLowerCase())||
                     services.getStandardRoom().toLowerCase().contains(key.toLowerCase())){
                 serviceList2.add(services);
             }
@@ -36,7 +40,48 @@ public class ServiceService implements IServiceService {
 
     @Override
     public Map<String, String> createService(Service service) {
-        return null;
+        Map<String, String> mapRegexAddService = new HashMap<>();
+
+        boolean flag = true;
+
+        if (!Pattern.matches(REGEX_CODE_SERVICE,service.getCode())){
+            flag = false;
+            mapRegexAddService.put("code","Mã dịch vụ không đúng định dạng. (vd: DV-0123)");
+        }
+
+        if (service.getName().equals("")){
+            flag = false;
+            mapRegexAddService.put("name","Chưa nhập tên dịch vụ");
+        }
+        if (service.getDescription().equals("")){
+            flag = false;
+            mapRegexAddService.put("description","Chưa nhập mô tả");
+        }
+        if (service.getArea()<=0){
+            flag = false;
+            mapRegexAddService.put("area","Diện tích phải là số dương");
+        }
+        if (service.getMaxPeople()<=0){
+            flag = false;
+            mapRegexAddService.put("maxPeople","Số người tối đa phải là số dương");
+        }
+        if (service.getServiceTypeId() == 1||service.getServiceTypeId() == 2){
+            if (service.getNumberFloors()<=0){
+                flag = false;
+                mapRegexAddService.put("numberFloors","Số tầng phải là số dương");
+            }
+        }
+        if (service.getServiceTypeId() == 1){
+            if (service.getPoolArea()<=0){
+                flag = false;
+                mapRegexAddService.put("poolArea","Diện tích hồ bơi phải là số dương");
+            }
+        }
+
+        if (flag){
+            serviceRepo.createService(service);
+        }
+        return mapRegexAddService;
     }
 
     @Override

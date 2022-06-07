@@ -147,7 +147,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabeladdNew">Thêm Nhân viên</h5>
+                <h5 class="modal-title" id="exampleModalLabeladdNew">Thêm dịch vụ</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -157,88 +157,79 @@
                     <div class="d-flex">
                         <div class="col-6">
                             <div class="form-group">
-                                <label>Tên nhân viên</label>
-                                <input type="text" class="form-control" name="name" value="${employee.name}"
-                                       placeholder="Nhập tên nhân viên">
+                                <label>Mã dịch vụ</label>
+                                <input type="text" class="form-control" name="code" value="${service.code}"
+                                       placeholder="Nhập mã dịch vụ" required>
+                                <p style="color: red">${errorAdd.get("code")}</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Tên dịch vụ</label>
+                                <input type="text" class="form-control" name="name" value="${service.name}"
+                                       placeholder="Nhập tên dịch vụ" required>
                                 <p style="color: red">${errorAdd.get("name")}</p>
                             </div>
                             <div class="form-group">
-                                <label>Ngày Sinh</label>
-                                <input placeholder="Selected date" type="date" name="birthday" value="${employee.birthday}"
-                                       class="form-control datepicker">
-                                <p style="color: red">${errorAdd.get("birthday")}</p>
+                                <label>Diện tích</label>
+                                <input type="number" name="area"
+                                       value="${service.area}" class="form-control datepicker" placeholder="Nhập diện tích" required>
+                                <p style="color: red">${errorAdd.get("area")}</p>
                             </div>
                             <div class="form-group">
-                                <label>Số CMND</label>
-                                <input type="text" class="form-control" name="idCard" value="${employee.idCard}"
-                                       placeholder="Nhập số CMND">
-                                <p style="color: red">${errorAdd.get("idCard")}</p>
+                                <label>Số người tối đa</label>
+                                <input type="number" class="form-control" name="maxPeople" value="${service.maxPeople}"
+                                       placeholder="Nhập số người tối đa" required>
+                                <p style="color: red">${errorAdd.get("maxPeople")}</p>
                             </div>
                             <div class="form-group">
-                                <label>Số Điện thoại</label>
-                                <input type="text" class="form-control" name="phone" value="${employee.phone}"
-                                       placeholder="Nhập số Điện thoại">
-                                <p style="color: red">${errorAdd.get("phone")}</p>
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" class="form-control" name="email" value="${employee.email}"
-                                       placeholder="Nhập Email">
-                                <p style="color: red">${errorAdd.get("email")}</p>
-                            </div>
-                            <div class="form-group">
-                                <label>Địa chỉ</label>
-                                <input type="text" class="form-control" name="address" value="${employee.address}"
-                                       placeholder="Nhập địa chỉ">
-                                <p style="color: red">${errorAdd.get("address")}</p>
+                                <label>Kiểu thuê</label>
+                                <select class="custom-select" name="rentTypeId" >
+                                    <c:forEach var="type" items="${rentTypeMap}">
+                                        <option value="${type.key}">${type.value}</option>
+                                    </c:forEach>
+                                </select>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label>Lương</label>
-                                <input type="number" class="form-control" name="salary" value="${employee.salary}"
-                                       placeholder="Nhập lương" required>
-                                <p style="color: red">${errorAdd.get("salary")}</p>
-                            </div>
-                            <div class="form-group">
-                                <label>Chức vụ</label>
-                                <select class="custom-select" name="position" required>
-                                    <c:forEach var="type" items="${positonList}">
+                                <label>Loại dịch vụ</label>
+                                <select class="custom-select" name="serviceTypeId"  id="serviceTypeIdAddNew" onchange="changeServiceTypeAddNew()" >
+                                    <c:forEach var="type" items="${serviceTypeMap}">
                                         <option value="${type.key}">${type.value}</option>
                                     </c:forEach>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Trình độ</label>
-                                <select class="custom-select" name="education" required>
-                                    <c:forEach var="type" items="${educationList}">
-                                        <option value="${type.key}">${type.value}</option>
-                                    </c:forEach>
+                                <label>Loại phòng</label>
+                                <select class="custom-select" name="standardRoom"  >
+                                    <option value="Thường">Thường</option>
+                                    <option value="VIP">VIP</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Bộ phận</label>
-                                <select class="custom-select" name="division" required>
-                                    <c:forEach var="type" items="${divisionList}">
-                                        <option value="${type.key}">${type.value}</option>
-                                    </c:forEach>
-                                </select>
+                                <label>Diện tích hồ bơi</label>
+                                <input type="number" class="form-control" name="poolArea" id="poolAreaAddNew" value="${service.poolArea}"
+                                       placeholder="Nhập diện tích hồ bơi" required>
+                                <p style="color: red">${errorAdd.get("poolArea")}</p>
                             </div>
                             <div class="form-group">
-                                <label>Tên tài khoản</label>
-                                <input type="text" class="form-control" name="username" value="${employee.username}"
-                                       placeholder="Nhập tên tài khoản">
-                                <p style="color: red">${errorAdd.get("username")}</p>
+                                <label>Tầng</label>
+                                <input type="number" class="form-control" name="numberFloors" id="numberFloorsAddNew" value="${service.numberFloors}"
+                                       placeholder="Nhập tầng" required>
+                                <p style="color: red">${errorAdd.get("numberFloors")}</p>
                             </div>
                             <div class="form-group">
-                                <label>Mật khẩu</label>
-                                <input type="password" class="form-control" name="password" value="${employee.password}"
-                                       placeholder="Nhập mật khẩu">
-                                <p style="color: red">${errorAdd.get("password")}</p>
+                                <label>Chi phí</label>
+                                <input type="number" class="form-control" name="serviceCost" value="${service.serviceCost}"
+                                       placeholder="Nhập chi phí" required>
+                                <p style="color: red">${errorAdd.get("serviceCost")}</p>
                             </div>
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <textarea class="form-control" name="description" rows="3" placeholder="Nhập mô tả" required>${service.description}</textarea>
+                        <p style="color: red">${errorAdd.get("description")}</p>
+                    </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block mb-4">Xác nhận</button>
                     </div>
@@ -265,15 +256,15 @@
                     <div class="d-flex">
                         <div class="col-6">
                             <div class="form-group">
-                                <label>Tên nhân viên</label>
+                                <label>Tên dịch vụ</label>
                                 <input type="text" class="form-control" name="name" id="name" value="${service.name}"
-                                       placeholder="Nhập tên nhân viên" required>
+                                       placeholder="Nhập tên dịch vụ" required>
                                 <p style="color: red">${errorEdit.get("name")}</p>
                             </div>
                             <div class="form-group">
                                 <label>Diện tích</label>
-                                <input placeholder="Selected date" type="number" name="area" id="area"
-                                       value="${employee.area}" class="form-control datepicker" placeholder="Nhập diện tích" required>
+                                <input type="number" name="area" id="area"
+                                       value="${service.area}" class="form-control datepicker" placeholder="Nhập diện tích" required>
                                 <p style="color: red">${errorEdit.get("area")}</p>
                             </div>
                             <div class="form-group">
@@ -352,8 +343,30 @@
     });
 </script>
 <script>
-    function changeServiceType(){
+    function changeServiceTypeAddNew(){
 
+        if (document.getElementById("serviceTypeIdAddNew").value == "1"){
+            document.getElementById("poolAreaAddNew").placeholder = "Nhập diện tích hồ bơi"
+            document.getElementById("numberFloorsAddNew").placeholder = "Nhập số tầng"
+            document.getElementById("poolAreaAddNew").disabled = false;
+            document.getElementById("numberFloorsAddNew").disabled = false;
+        }else if (document.getElementById("serviceTypeIdAddNew").value == "2"){
+            document.getElementById("poolAreaAddNew").value = "";
+            document.getElementById("poolAreaAddNew").placeholder = "House không có hồ bơi"
+            document.getElementById("numberFloorsAddNew").placeholder = "Nhập số tầng"
+            document.getElementById("poolAreaAddNew").disabled = true;
+            document.getElementById("numberFloorsAddNew").disabled = false;
+        }else {
+            document.getElementById("poolAreaAddNew").value = "";
+            document.getElementById("poolAreaAddNew").placeholder = "Room không có hồ bơi"
+            document.getElementById("numberFloorsAddNew").value = "";
+            document.getElementById("numberFloorsAddNew").placeholder = "Room không có tầng"
+            document.getElementById("poolAreaAddNew").disabled = true;
+            document.getElementById("numberFloorsAddNew").disabled = true;
+        }
+    }
+
+    function changeServiceType(){
         if (document.getElementById("serviceTypeId").value == "1"){
             document.getElementById("poolArea").placeholder = "Nhập diện tích hồ bơi"
             document.getElementById("numberFloors").placeholder = "Nhập số tầng"
