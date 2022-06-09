@@ -19,35 +19,6 @@ public class Service {
     public Service() {
     }
 
-    public Service(Integer id,
-                   String code,
-                   String name,
-                   Double area,
-                   Double serviceCost,
-                   Integer maxPeople,
-                   Integer rentTypeId,
-                   String rentTypeValue,
-                   Integer serviceTypeId,
-                   String serviceTypeValue,
-                   String standardRoom,
-                   String description,
-                   Double poolArea,
-                   Integer numberFloors) {
-        this.id = id;
-        this.code = code;
-        this.name = name;
-        this.area = area;
-        this.serviceCost = serviceCost;
-        this.maxPeople = maxPeople;
-        this.rentTypeId = rentTypeId;
-        this.rentTypeValue = rentTypeValue;
-        this.serviceTypeId = serviceTypeId;
-        this.serviceTypeValue = serviceTypeValue;
-        this.standardRoom = standardRoom;
-        this.description = description;
-        this.poolArea = poolArea;
-        this.numberFloors = numberFloors;
-    }
 
     public Double getServiceCost() {
         return serviceCost;

@@ -45,12 +45,9 @@
 
         </div>
         <div class="col-2 my-3">
-                <form action="#" class="searchform order-lg-last">
                     <div class="form-group d-flex justify-content-center m-2">
-                        <input type="text" class="form-control col-12" placeholder="Tìm kiếm">
-                        <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+                        123123123
                     </div>
-                </form>
         </div>
     </div>
 </section>

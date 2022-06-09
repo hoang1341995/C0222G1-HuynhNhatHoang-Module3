@@ -336,13 +336,6 @@
 <!-- Modal edit -->
 <%@include file="../../form/footer.jsp" %>
 <script>
-    $(document).ready(function () {
-        ${openModalAdd}
-        ${openModalEdit}
-        ${openModalMessage}
-    });
-</script>
-<script>
     function changeServiceTypeAddNew(){
 
         if (document.getElementById("serviceTypeIdAddNew").value == "1"){

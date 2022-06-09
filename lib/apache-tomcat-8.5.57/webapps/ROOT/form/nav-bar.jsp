@@ -22,7 +22,7 @@
                 </li>
                 <li class="nav-item"><a href="/service" class="nav-link">Dịch vụ</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Hợp Đồng</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item"><a data-toggle="modal" data-target="#login" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Đăng ký</a></li>
             </ul>
         </div>
